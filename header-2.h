@@ -14,6 +14,7 @@ Notes: Not completed but will work on this more before Wednesday.
 #include <iostream>
 #include <iomanip>
 #include <fstream>
+#include <sstream>
 #include <string>
 #include <cmath>
 #include <vector>
