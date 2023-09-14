@@ -20,7 +20,7 @@ Notes:
 * Post: The input file is opened.
 *************************************************************/
 
-/*bool openInputFile(const string& filename, ifstream& inputFile){
+bool openInputFile(const string& filename, ifstream& inputFile){
     inputFile.open(filename);
 
     if (!inputFile.is_open()) {
@@ -29,7 +29,7 @@ Notes:
     }
 
     return true;
-}*/
+}
 
 /************************************************************
 * Function: openOutputFile()
@@ -44,7 +44,7 @@ Notes:
 * Post: The output file is opened.
 *************************************************************/
 
-/*bool openOutputFile(string filename, ofstream& outputFile){
+bool openOutputFile(string filename, ofstream& outputFile){
     outputFile.open(filename);
 
     if (!outputFile.is_open()) {
@@ -53,7 +53,7 @@ Notes:
     }
 
     return true;
-}*/
+}
 
 /************************************************************
 * Function: parseFileData()
