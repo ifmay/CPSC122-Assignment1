@@ -212,7 +212,7 @@ void listPetStores(const vector<PetData>& petDataList, ofstream& outputFile) {
 
     outputFile << endl;
 }
-// Function to find the total number of pets
+
 /************************************************************
 * Function: findTotalNumberOfPets()
 * Date Created: 9/6/23
@@ -222,8 +222,7 @@ void listPetStores(const vector<PetData>& petDataList, ofstream& outputFile) {
 * Input parameters: PetData vector
 * Returns: integer totalPets with the total number of pets
 * Pre: The PetData vector must be populated with information.
-* Post: The number of pets is returned as an integer to be used in
-  succeeding functions.
+* Post: The number of pets is returned as an integer
 *************************************************************/
 
 int findTotalNumberOfPets(const vector<PetData>& petDataList){
@@ -236,18 +235,16 @@ int findTotalNumberOfPets(const vector<PetData>& petDataList){
     return totalPets;
 }
 
-// Function to find the store with the most pets
 /************************************************************
-* Function: openOutputFile()
-* Date Created: 9/8/23
-* Date Last Modified: 9/11/23
-* Description: This function converts the times from min
-* and sec to just sec.
-* Input parameters: The time in minutes and seconds.
-* Returns: The runner's time in seconds only.
-* Pre: The minutes and seconds of the time had to
-* have been scanned in by the user.
-* Post: The runner's time in seconds only is returned.
+* Function: findStoreWithMostPets()
+* Date Created: 9/6/23
+* Date Last Modified: 9/10/23
+* Description: This function finds the store with the most pets
+  in the input file and returns it as a string.
+* Input parameters: PetData vector
+* Returns: string mostFrequent store with the store with most pets.
+* Pre: The PetData vector must be populated with information.
+* Post: The store with the most pets is returned as an string.
 *************************************************************/
 
 string findStoreWithMostPets(const vector<PetData>& petDataList) {
@@ -277,18 +274,18 @@ string findStoreWithMostPets(const vector<PetData>& petDataList) {
     return mostFrequentStore;
 }
 
-// Function to find the number of pets at the store with the most pets
 /************************************************************
-* Function: openOutputFile()
-* Date Created: 9/8/23
-* Date Last Modified: 9/11/23
-* Description: This function converts the times from min
-* and sec to just sec.
-* Input parameters: The time in minutes and seconds.
-* Returns: The runner's time in seconds only.
-* Pre: The minutes and seconds of the time had to
-* have been scanned in by the user.
-* Post: The runner's time in seconds only is returned.
+* Function: findPetsAtMostFrequentStore()
+* Date Created: 9/6/23
+* Date Last Modified: 9/10/23
+* Description: This function counts the total number of pets
+  at the most frequent store from data in the input file.
+* Input parameters: PetData vector
+* Returns: void function does not return anything. Rather finds the amount
+* of pets at the most frequent store and prints it to the output file.
+* Pre: The PetData vector must be populated with information.
+* Post: The number of pets at the most frequent store is printed to
+* the output file.
 *************************************************************/
 
 void findPetsAtMostFrequentStore(const vector<PetData>& petDataList, ofstream& outputFile) {
@@ -305,18 +302,17 @@ void findPetsAtMostFrequentStore(const vector<PetData>& petDataList, ofstream& o
     outputFile << "Number of pets at " << mostFrequentStore << ": " << count << endl;
 }
 
-// Function to calculate pet average days at the store
 /************************************************************
-* Function: openOutputFile()
-* Date Created: 9/8/23
-* Date Last Modified: 9/11/23
-* Description: This function converts the times from min
-* and sec to just sec.
-* Input parameters: The time in minutes and seconds.
-* Returns: The runner's time in seconds only.
-* Pre: The minutes and seconds of the time had to
-* have been scanned in by the user.
-* Post: The runner's time in seconds only is returned.
+* Function: calculateAverageDays()
+* Date Created: 9/6/23
+* Date Last Modified: 9/10/23
+* Description: This function calculates the average number of days
+* pets are at their respective stores.
+* Input parameters: PetData vector
+* Returns: average amount of days pets spend at their store as a double
+* Pre: The PetData vector must be populated with information.
+* Post: The average number of days pets spend at their respective stores
+* is calculated and returned as a double.
 *************************************************************/
 
 double calculateAverageDays(const vector<PetData>& petDataList){
@@ -332,18 +328,16 @@ double calculateAverageDays(const vector<PetData>& petDataList){
     return static_cast<double>(sum) / petDataList.size();
 }
 
-// Function to pick a random pet from the data
 /************************************************************
-* Function: openOutputFile()
-* Date Created: 9/8/23
-* Date Last Modified: 9/11/23
-* Description: This function converts the times from min
-* and sec to just sec.
-* Input parameters: The time in minutes and seconds.
-* Returns: The runner's time in seconds only.
-* Pre: The minutes and seconds of the time had to
-* have been scanned in by the user.
-* Post: The runner's time in seconds only is returned.
+* Function: pickRandomPet()
+* Date Created: 9/6/23
+* Date Last Modified: 9/10/23
+* Description: This function picks a random pet from the input file 
+* Input parameters: PetData vector
+* Returns: integer totalPets with the total number of pets
+* Pre: The PetData vector must be populated with information.
+* Post: The number of pets is returned as an integer to be used in
+  succeeding functions.
 *************************************************************/
 
 PetData pickRandomPet(const vector<PetData>& petDataList) {
